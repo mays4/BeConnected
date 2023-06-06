@@ -1,0 +1,54 @@
+import mongoose from "mongoose";
+
+const UserSchema = new mongoose.Schema({
+  fristName: {
+    type: String,
+    required:true,
+    min:3,
+    max:50,
+  },
+  lastName:{
+     tyString,
+    required:true,
+    min:3,
+    max:50,
+  },
+  email:{
+    type: String,
+    required:true,
+    max:50,
+    unique:true,
+  },
+  password:{
+   type:String,
+    required:true,
+    min:8,
+    
+  },
+  password:{
+    
+  type: String,
+  required:true,
+  min:8,
+  
+},
+picturePath:{
+  type:String,
+  default:""
+},
+friends:{
+  type:Array,
+  default:[]
+},
+location:string,
+occupation:string,
+viewedProfile:Number,
+impresssons:Number
+
+
+}
+,{timestamps:true}
+);
+
+const User = mongoose.model("User",UserSchema);
+export default User;
