@@ -8,7 +8,7 @@ const UserSchema = new mongoose.Schema({
     max:50,
   },
   lastName:{
-     tyString,
+     type:String,
     required:true,
     min:3,
     max:50,
@@ -40,8 +40,8 @@ friends:{
   type:Array,
   default:[]
 },
-location:string,
-occupation:string,
+location:String,
+occupation:String,
 viewedProfile:Number,
 impresssons:Number
 
