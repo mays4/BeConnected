@@ -5,7 +5,7 @@ const PostSchema  = new mongoose.Schema({
     type: String,
     required:true,
   },
-  fristName: {
+  firstName: {
     type: String,
     required:true,
     
@@ -15,20 +15,19 @@ const PostSchema  = new mongoose.Schema({
     required:true,
    
   },
-picturePath:String,
-userPicturePath:String,
-description:String,
-location:String,
-likes:{
-  type:Map,
-of:Boolean},
+  location:String,
+  description:String,
+  picturePath:String,
+  userPicturePath:String,
+  likes:{
+    type: Map,
+    of: Boolean,
+},
 
 comments:{
   type:Array,
   default:[]
-}
-
-
+},
 }
 ,{timestamps:true}
 );

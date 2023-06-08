@@ -1,16 +1,16 @@
 import mongoose from "mongoose";
 
 const UserSchema = new mongoose.Schema({
-  fristName: {
+  firstName: {
     type: String,
     required:true,
-    min:3,
+    min:2,
     max:50,
   },
   lastName:{
      type:String,
     required:true,
-    min:3,
+    min:2,
     max:50,
   },
   email:{
@@ -25,13 +25,6 @@ const UserSchema = new mongoose.Schema({
     min:8,
     
   },
-  password:{
-    
-  type: String,
-  required:true,
-  min:8,
-  
-},
 picturePath:{
   type:String,
   default:""
@@ -43,7 +36,7 @@ friends:{
 location:String,
 occupation:String,
 viewedProfile:Number,
-impresssons:Number
+impressions:Number
 
 
 }

@@ -8,7 +8,7 @@ export const createPost= async(req,res)=>{
     const user = await User.findById(userId);
     const newPost= new Post({
   userId,
-  firstName:user.fristName,
+  firstName:user.firstName,
   lastName:user.lastName,
   location:user.location,
   description,
@@ -22,7 +22,7 @@ export const createPost= async(req,res)=>{
     res.status(201).json(post);
 
 }catch(err){
-  res.status(409).json({error:err.message})
+  res.status(409).json({message:err.message})
 }
 
 }
