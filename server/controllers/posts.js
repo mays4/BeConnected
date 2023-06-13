@@ -4,7 +4,8 @@ import User from "../models/User.js";
 /* Create */
 export const createPost= async(req,res)=>{
   try{
-    const {userId,description,picturePath,userPicturePath}=req.body;
+    const {userId,description,picturePath}=req.body;
+    
     const user = await User.findById(userId);
     const newPost= new Post({
   userId,
@@ -17,6 +18,7 @@ export const createPost= async(req,res)=>{
   likes:{},
   comments:[]
     })
+    console.log("post",newPost)
     await newPost.save();
     const post = await Post.find();
     res.status(201).json(post);
@@ -31,24 +33,22 @@ export const createPost= async(req,res)=>{
 
 export const getFeedPosts = async(req,res)=>{
   try{
-   const {id} = req.params;
-
    const post = await Post.find();
    res.status(200).json(post);
   }catch(err){
-     res.status(404).json({message:err.message})
+     res.status(404).json({err:err.message})
   }
 }
 
 export const getUserPosts = async(req,res)=>{
   try{
     const {userId} = req.params;
-    const post = await post.find({userId});
+    const post = await Post.find({userId});
 
     res.status(200).json(formattedFriends);
 
   }catch(err){
-     res.status(404).json({message:err.message})
+     res.status(404).json({err:err.message})
   }
 };
 /* update */
@@ -58,7 +58,7 @@ export const likePost = async (req,res)=>{
   try{
     const {id} = req.params;
     const{userId}=req.body;
-    const post = await post.findById(id);
+    const post = await Post.findById(id);
     const isLiked = await post.likes.get(userId);
 
     if(isLiked){
@@ -77,6 +77,6 @@ export const likePost = async (req,res)=>{
     res.status(200).json(updatedPost);
 
   }catch(err){
-    res.status(404).json({message:err.message});
+    res.status(404).json({err:err.message});
   }
 }
