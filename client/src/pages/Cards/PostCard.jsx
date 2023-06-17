@@ -23,7 +23,7 @@ const PostCard=({ postId,
   userPicturePath,
   likes,
   comments})=>{
-    // console.log("testerer",name,likes,comments)
+   
     const [isComments, setIsComments] = useState(false);
     const dispatch = useDispatch();
     const token = useSelector((state) => state.token);

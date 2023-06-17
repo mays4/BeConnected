@@ -51,11 +51,7 @@ const UserCard = ({ userId, picturePath }) => {
 
   const handleshow = () => {
     navigate(`/profile/${userId}`);
-    //  num = counter  + 1
-    //  console.log("num",num)
-    // setCounter(num)
-    // setProfile(true)
-    // console.log("prof",profile)
+
   };
 
   return (

@@ -82,13 +82,13 @@ export const likePost = async (req,res)=>{
 }
 
 export const deletePost = async(req,res)=>{
-  console.log("reached here but there is something")
+  
   try{
     const {id} = req.params;
    
     const post = await Post.findById(id);
     
-  console.log("post",post.userId)
+
 
    if(post.userId === req.user.id){
     await post.deleteOne();
