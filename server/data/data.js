@@ -20,7 +20,6 @@ export const users = [
     email: "Mary87@gmail.com",
     password: "$2b$10$dsasdgseresda//G9JxQ4bQ8ee4OAIe/X/AK9skyWUy",
     picturePath: "profile1.jpg",
-    // friends: [{ _id:userIds[3], firstName:"Sally", lastName:"hassan", occupation:"Instructor", location:"Alberta, CA", picturePath:"profile6.jpg"}],
     friends:[],
     location: "Toronto, CA",
     occupation: "Software Engineer",
