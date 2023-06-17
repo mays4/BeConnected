@@ -35,9 +35,9 @@ const PostCard=({ postId,
     const main = palette.neutral.main;
     const primary = palette.primary.main;
 
-    
+    const URL = (useSelector((state)=>state.URL))
     const handleLike= async()=>{
-      const response = await fetch(`http://localhost:3001/posts/${postId}/like`,{
+      const response = await fetch(`${URL}/posts/${postId}/like`,{
         method:"PATCH",
         headers:{
           Authorization: `Bearer ${token}`,
@@ -54,7 +54,7 @@ const PostCard=({ postId,
 
     const handleDelete = async()=>{
 
-      const response = await fetch(`http://localhost:3001/posts/${postId}`,{
+      const response = await fetch(`${URL}/posts/${postId}`,{
         method: 'DELETE',
         headers:{
           Authorization: `Bearer ${token}`,
@@ -89,7 +89,7 @@ return(
           height="auto"
           alt="post"
           style={{ borderRadius: "0.75rem", marginTop: "0.75rem" }}
-          src={`http://localhost:3001/assets/${picturePath}`}
+          src={`${URL}/assets/${picturePath}`}
         />
       )}
       <FlexBox mt="0.25rem">

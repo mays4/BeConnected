@@ -19,9 +19,9 @@ import {
 import storage  from "redux-persist/lib/storage";
 import { PersistGate } from 'redux-persist/integration/react';
 
+import {disableReactDevTools} from '@fvilers/disable-react-devtools'
 
-
-
+if(process.env.NODE_ENV ==="production") disableReactDevTools()
 const persistConfig = {key:"root",storage, version:1};
 const persistedReducer= persistReducer(persistConfig,authReducer);
 const store = configureStore({
