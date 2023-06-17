@@ -21,9 +21,7 @@ const UserCard = ({ userId, picturePath }) => {
   const medium = palette.neutral.medium;
   const main = palette.neutral.main;
   const URL = (useSelector((state)=>state.URL))
-  //   const [counter,setCounter]=useState(1);
-  //   const [profile,setProfile]=useState(false)
-  // let num;
+  
   const getUser = async () => {
     const response = await fetch(`${URL}/users/${userId}`, {
       method: "GET",

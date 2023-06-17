@@ -7,6 +7,7 @@ posts:[],
 user:null,
 token:null,
 URL: "https://beconnected-api.onrender.com",
+// URL: "http://localhost:3001",
 
 };
 export const authSlice = createSlice({

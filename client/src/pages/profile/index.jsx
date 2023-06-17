@@ -15,7 +15,6 @@ const Profile= ()=> {
   const token = useSelector((state)=> state.token);
   const {_id}= useSelector((state)=> state.user);
   const {palette}=useTheme();
-  const medium = palette.neutral.medium;
   const isUser= userId === _id;
   const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
   const URL = (useSelector((state)=>state.URL))
