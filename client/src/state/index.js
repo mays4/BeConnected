@@ -6,7 +6,7 @@ mode:"light",
 posts:[],
 user:null,
 token:null,
-URL: "https://BeConnected.onrender.com",
+URL: "https://BeConnected-api.onrender.com",
 
 };
 export const authSlice = createSlice({
