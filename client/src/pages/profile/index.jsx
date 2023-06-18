@@ -32,7 +32,7 @@ const Profile= ()=> {
   },[])
   if (!user) return null;
   return (
-<Box backgroundColor={palette.primary.main}>
+<Box >
       <Navbar/>
       <Box width="100%" padding="2rem 6%" display={isNonMobileScreens?"flex":"block"} gap="2rem"justifyContent="center">
       <Box flexBasis={isNonMobileScreens?"25%":undefined}  sx={{marginTop:"1.80rem"}} >
@@ -44,7 +44,7 @@ const Profile= ()=> {
 )}
 </Box>
      {isUser?(
-      <Box flexBasis={isNonMobileScreens?"70%":undefined} mt={isNonMobileScreens? undefined:"2rem"} sx={{marginTop:"1.80rem"}}
+      <Box  flexBasis={isNonMobileScreens?"70%":undefined} mt={isNonMobileScreens? undefined:"2rem"} sx={{marginTop:"1.80rem"}}
       >
             <MyPost picturePath={user.picturePath} /> 
           

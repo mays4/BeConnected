@@ -216,9 +216,9 @@ return(
             borderColor:palette.primary.dark,
            margin: "2rem 6rem",
            padding: "1rem",
-           backgroundColor: palette.primary.main,
+           backgroundColor: palette.secondary.dark,
            color: palette.background.alt,
-           "&:hover": { color: palette.primary.main},
+           "&:hover": { color: palette.primary.dark},
          }}
         >
            {isLogin ? "LOGIN" : "REGISTER"}
@@ -230,11 +230,11 @@ return(
               }}
               sx={{
                 textDecoration: "underline",
-                color: palette.primary.main,
+                color: palette.secondary.dark,
             
                 "&:hover": {
                   cursor: "pointer",
-                  color: palette.primary.light,
+                  color: palette.primary.main,
                 },
               }}
             >

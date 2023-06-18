@@ -9,7 +9,7 @@ const Login= ()=> {
 
   return (
     <Box>
-      <Box withd="100%" background={theme.palette.background.alt} padding="1rem 6%" textAlign="center" >
+      <Box withd="100%" background={theme.palette.background.default} padding="1rem 6%" textAlign="center" >
        <Typography fontWeight="bold" fontSize="32px" color ="primary"
       
         >
