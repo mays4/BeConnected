@@ -1,10 +1,10 @@
 # BeConnected
-## Summary
+## OverView
 
 COMPLETE MERN Fullstack Responsive App with Auth, Likes, Dark/Light Mode, Comments, Posts delete your post and and remove friends  
 
 
-## 
+## Features
 #### Register page
 ![register](client/public/assets/register.png)
 #### Login 
@@ -18,7 +18,7 @@ COMPLETE MERN Fullstack Responsive App with Auth, Likes, Dark/Light Mode, Commen
 ![posting](client/public/assets/posting.png)
 
 
-Installation
+## Installation
 1-Clone the repo
 git clone [https://github.com/mays4/BeConnected](https://github.com/mays4/BeConnected)
 To run FrontEnd 
@@ -40,11 +40,12 @@ To visit live site
 To visit the live version [https://beconnected-zehb8iikb-mays.vercel.app](https://beconnected-zehb8iikb-mays.vercel.app)
 
 
-
+## Dependencies
 #### FrontEnd
 - React 
 - MUI
 - react-router-dom
+- Formik 
 
 
 #### BackEnd
