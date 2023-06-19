@@ -22,6 +22,7 @@ const MyPost=({picturePath})=>{
     const token = useSelector((state) => state.token);
     const [image,setImage] =useState(null);
     const [isImage,setIsImage] =useState(false);
+    
     const[post,setPost]=useState("");
     const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
     const  {_id} = useSelector((state) => state.user);
@@ -48,9 +49,10 @@ const MyPost=({picturePath})=>{
       const posts = await response.json();
 
       dispatch(setPosts({posts}));
+  
       setImage(null);
       setPost("");
-      window.location.reload()
+       window.location.reload()
     };
 
 

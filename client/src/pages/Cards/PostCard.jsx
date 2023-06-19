@@ -54,6 +54,9 @@ const PostCard=({ postId,
     }
 
     const handleDelete = async()=>{
+      if(loggedInUserId !==postUserId){
+        return;
+      }
 
       const response = await fetch(`${URL}/posts/${postId}`,{
         method: 'DELETE',
@@ -61,7 +64,7 @@ const PostCard=({ postId,
           Authorization: `Bearer ${token}`,
           "Content-Type": "application/json",
         },
-          })
+          });
           
           const updatedPost =await response.json();
           setIsDeleted(true)

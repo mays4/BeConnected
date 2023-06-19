@@ -6,8 +6,8 @@ mode:"light",
 posts:[],
 user:null,
 token:null,
-URL: "https://beconnected-api.onrender.com",
-// URL: "http://localhost:3001",
+// URL: "https://beconnected-api.onrender.com",
+URL: "http://localhost:3001",
 
 };
 export const authSlice = createSlice({
@@ -34,7 +34,9 @@ export const authSlice = createSlice({
       }
     },
     setPosts:(state,action)=>{
-        state.posts = action.payload.posts;
+        state.posts = action.payload.posts.slice(0).reverse().map((e)=>{
+          return e;
+        });
 
       },
     setPost:(state,action)=>{

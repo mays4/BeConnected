@@ -25,7 +25,7 @@ const Home = ()=> {
       {isNonMobileScreens &&(
           <Box flexBasis="30%">
         <Box margin="2rem 0 ">
-          <FriendListCard userId={_id}/>
+          {/* <FriendListCard userId={_id}/> */}
         </Box>
        </Box>
       )}
