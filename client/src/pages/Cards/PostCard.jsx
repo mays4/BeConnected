@@ -25,6 +25,7 @@ const PostCard=({ postId,
   comments})=>{
    
     const [isComments, setIsComments] = useState(false);
+    const[isDeleted,setIsDeleted]=useState(false)
     const dispatch = useDispatch();
     const token = useSelector((state) => state.token);
    
@@ -63,14 +64,11 @@ const PostCard=({ postId,
           })
           
           const updatedPost =await response.json();
-          dispatch(setPost({post:updatedPost}));
-          // dispatch(setPost({post:updatedPost}));
-          window.location.reload()
+          setIsDeleted(true)
         }
+        if(isDeleted)return null;
 
-        // useEffect(()=>{
-        //   handleDelete()
-        // },[])
+    
 return(
   <CardWrapper margin="2rem 0">
     <Friend
