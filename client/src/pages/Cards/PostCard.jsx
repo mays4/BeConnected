@@ -117,9 +117,11 @@ return(
 
         
           <Box display="flex" gap="2rem">
+          {loggedInUserId ===postUserId &&(
           <IconButton  onClick={handleDelete}>
           <  DeleteOutline/>
           </IconButton>
+          )}
           <IconButton>
           <ShareOutlined />
           </IconButton>

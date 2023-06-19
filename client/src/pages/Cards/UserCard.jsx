@@ -92,7 +92,7 @@ const UserCard = ({ userId, picturePath }) => {
 
       <Divider />
 
-      {/* {profile  &&( */}
+     
       <Box p="1rem 0">
         <FlexBox mb="0.5rem">
           <Typography color={medium}>Who's viewed your profile</Typography>
@@ -107,7 +107,7 @@ const UserCard = ({ userId, picturePath }) => {
           </Typography>
         </FlexBox>
       </Box>
-      {/* )} */}
+    
 
       <Divider />
 
