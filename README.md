@@ -37,7 +37,7 @@ Runs the app in the development mode.\
 Open [http://localhost:3001](http://localhost:3001)
 
 To visit live site 
-To visit the live version [https://beconnected-zehb8iikb-mays.vercel.app](https://beconnected-zehb8iikb-mays.vercel.app)
+To visit the live version [https://beconnected-k0qgb9z44-mays.vercel.app](https://beconnected-k0qgb9z44-mays.vercel.app)
 
 
 ## Dependencies
