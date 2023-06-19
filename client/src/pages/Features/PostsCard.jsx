@@ -30,11 +30,11 @@ const PostsCard=({ userId, isProfile = false })=>{
   };
   useEffect(()=>{
     if(isProfile){
-      getUserPosts()
-      console.log("isOr",isProfile)
+      getUserPosts();
+   
     }else{
       getPosts();
-      console.log("isOrnot",isProfile)
+    
     }
 
   },[]); // eslint-disable-line react-hooks/exhaustive-deps

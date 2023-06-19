@@ -4,10 +4,10 @@ import { useEffect,useState } from 'react';
 import {useParams} from "react-router-dom"
 import { useSelector } from 'react-redux';
 import Navbar from 'pages/navbar';
-import UserCard from 'pages/Cards/UserCard';
-import FriendListCard from 'pages/Cards/FriendListCard';
-import PostsCard from 'pages/Cards/PostsCard';
-import MyPost from 'pages/Cards/MyPost';
+import UserCard from 'pages/Features/UserCard';
+import FriendListCard from 'pages/Features/FriendListCard';
+import PostsCard from 'pages/Features/PostsCard';
+import MyPost from 'pages/Features/MyPost';
 
 const Profile= ()=> {
   const [user,setUser]=useState(null);
@@ -36,9 +36,9 @@ const Profile= ()=> {
       <Navbar/>
       <Box width="100%" padding="2rem 6%" display={isNonMobileScreens?"flex":"block"} gap="2rem"justifyContent="center">
       <Box flexBasis={isNonMobileScreens?"25%":undefined}  sx={{marginTop:"1.80rem"}} >
-<UserCard userId={userId} picturePath={user.picturePath}/>
+<UserCard userId={userId} picturePath={user.picturePath} backgroundColor="red"/>
 
-<Box margin="1rem 0"/>
+<Box margin="1rem 0" />
 { isUser&&( 
   <FriendListCard userId={userId} />
 )}

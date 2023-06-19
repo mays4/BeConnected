@@ -1,7 +1,7 @@
 
 import { Box,Typography,useTheme} from '@mui/material';
 import { useEffect } from 'react';
-import Friend from "pages/Cards/Friend";
+import Friend from "pages/Features/Friend";
 import CardWrapper from 'components/CardWrapper';
 import {  useDispatch,useSelector } from 'react-redux';
 import { setFriends } from 'state';

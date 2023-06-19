@@ -2,10 +2,10 @@ import React from 'react'
 import { Box,useMediaQuery} from '@mui/material';
 import { useSelector } from 'react-redux';
 import Navbar from 'pages/navbar';
-import UserCard from 'pages/Cards/UserCard';
-import FriendListCard from 'pages/Cards/FriendListCard';
-import MyPost from "pages/Cards/MyPost";
-import PostsCard from "pages/Cards/PostsCard";
+import UserCard from 'pages/Features/UserCard';
+import FriendListCard from 'pages/Features/FriendListCard';
+import MyPost from "pages/Features/MyPost";
+import PostsCard from "pages/Features/PostsCard";
 
 
 

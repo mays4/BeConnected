@@ -52,7 +52,7 @@ const MyPost=({picturePath})=>{
   
       setImage(null);
       setPost("");
-       window.location.reload()
+       window.location.reload();
     };
 
 

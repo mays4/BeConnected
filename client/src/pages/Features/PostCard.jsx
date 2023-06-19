@@ -8,7 +8,7 @@ import {
 import { Box, Divider, IconButton, Typography, useTheme } from "@mui/material";
 import CardWrapper from "components/CardWrapper";
 import FlexBox from "components/FlexBox";
-import Friend from "pages/Cards/Friend";
+import Friend from "pages/Features/Friend";
 import {  useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setPost } from "state";
