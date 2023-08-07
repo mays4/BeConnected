@@ -21,20 +21,24 @@ COMPLETE MERN Fullstack Responsive App with Auth, Likes, Dark/Light Mode, Commen
 ## Installation
 1-Clone the repo
 git clone [https://github.com/mays4/BeConnected](https://github.com/mays4/BeConnected)
-To run FrontEnd 
-cd client 
-npm install 
-npm run start
-Runs the app in the development mode.\
+# To run FrontEnd 
+```
+- cd client 
+- npm install 
+- npm run start
+--Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```
 
+# To Run Backend
 
-To Run Backend
-cd cd server 
-npm install 
-node index.js
-Runs the app in the development mode.\
-Open [http://localhost:3001](http://localhost:3001)
+```
+- cd server 
+- npm install 
+- node index.js
+- Runs the app in the development mode.\
+- Open [http://localhost:3001](http://localhost:3001)
+```
 
 To visit live site 
 To visit the live version [https://beconnected-k0qgb9z44-mays.vercel.app](https://beconnected-k0qgb9z44-mays.vercel.app)
