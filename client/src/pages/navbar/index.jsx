@@ -21,8 +21,8 @@ const Navbar = ()=> {
   const neutralLight = theme.palette.neutral.light;
   const dark = theme.palette.neutral.dark;
   const background = theme.palette.background.default;
-  const primaryLight = theme.palette.primary.default;
   const alt= theme.palette.background.alt;
+  const { palette } = useTheme();
 
 const initialName=!user ? "defaul User":`${user.firstName.slice(0,1).toUpperCase()} ${user.lastName.slice(0,1).toUpperCase()}`
 const fullName=`${user.firstName} ${user.lastName}`
@@ -30,16 +30,18 @@ const fullName=`${user.firstName} ${user.lastName}`
   return (
     <FlexBox padding="1rem 6%" backgroundColor={alt}>
       <FlexBox  >
-        <Typography fontWeight="bold"  textDecoration="underline"   fontSize="clamp(1rem,2rem,2.25rem" color ="primary"onClick={()=>navigate("/home")}
+        <Typography fontWeight="bold"  textDecoration="underline"   fontSize="clamp(1rem,1.50rem,1.50rem)" color ={dark} onClick={()=>navigate("/home")}
         sx={{
           "&:hover":{
-            color:primaryLight,
+            color: palette.primary.dark,
             cursor:'pointer'
           }
         }}
         >
-          BeConnected 
+          BeConnected
         </Typography>
+     
+
         {isNonMobileScreens && (
             <FlexBox backgroundColor={neutralLight} borderRadius="9px" gap="rem" padding="0.1rem 1.5rem" marginLeft="8rem"
             >
@@ -141,10 +143,7 @@ const fullName=`${user.firstName} ${user.lastName}`
             
             "& .MuiSvgIcon-root" :{
               pr:"0.25rem",
-              width:"3rem",
-       
-             
-              
+              width:"3rem",  
               
             },
             "& .MuiSelect-select:focus":{
