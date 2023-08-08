@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box,Typography,useMediaQuery,useTheme} from '@mui/material';
 import { useEffect,useState } from 'react';
-import {useParams} from "react-router-dom"
+import {useParams} from "react-router-dom";
 import { useSelector } from 'react-redux';
 import Navbar from 'pages/navbar';
 import UserCard from 'pages/Features/UserCard';
@@ -17,7 +17,8 @@ const Profile= ()=> {
   const {palette}=useTheme();
   const isUser= userId === _id;
   const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
-  const URL = (useSelector((state)=>state.URL))
+  const URL = (useSelector((state)=>state.URL));
+
   const getUser = async ()=>{
     const response = await fetch(`${URL}/users/${userId}`,
     {
@@ -31,8 +32,15 @@ const Profile= ()=> {
    getUser();
   },[])
   if (!user) return null;
+  
+
+  const profileStyles = {
+    backgroundColor: isUser ? palette.primary.main : palette.secondary.main,
+    minHeight: '100vh',
+    width: '100%',
+  };
   return (
-<Box >
+<Box style={profileStyles}>
       <Navbar/>
      
       <Box width="100%" padding="2rem 6%" display={isNonMobileScreens?"flex":"block"} gap="2rem"justifyContent="center">
@@ -41,21 +49,19 @@ const Profile= ()=> {
 <UserCard userId={userId} picturePath={user.picturePath} backgroundColor="red"/>
 
 <Box margin="1rem 0" />
-{ isUser&&( 
-  <FriendListCard userId={userId} />
+{isUser && (
+  <FriendListCard userId={userId}  />
 )}
+
 </Box>
 
      {isUser?(
-    
-    
-      
   
       <Box  flexBasis={isNonMobileScreens?"70%":undefined} mt={isNonMobileScreens? undefined:"2rem"} sx={{marginTop:"1.80rem"}}
       >
         
          <FlexBox sx={{width:"100%",
-            backgroundColor:palette.primary.dark,
+            backgroundColor:palette.primary.light,
             alignItems:"center",
             borderRadius:"0.5rem",
             padding:"0.25rem 1rem",
