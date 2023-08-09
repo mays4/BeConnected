@@ -19,7 +19,7 @@ import {
 } from "@mui/material";
 import FlexBox from "components/FlexBox";
 import CardWrapper from "components/CardWrapper";
-import { useState } from "react";
+import { useState ,useEffect,useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setPosts } from "state";
 import UserImage from "components/UserImage";
@@ -37,7 +37,8 @@ const MyPost = ({ picturePath }) => {
   const medium = palette.neutral.medium;
   const mediumMain = palette.primary.mediumMain;
   const URL = useSelector((state) => state.URL);
-
+  const uploaderRef = useRef(null);
+  
   const handlePost = async () => {
     const formData = new FormData();
     formData.append("userId", _id);
@@ -59,8 +60,25 @@ const MyPost = ({ picturePath }) => {
 
     setImage(null);
     setPost("");
- 
+
   };
+  useEffect(() => {
+    const handleOutsideClick = (event) => {
+      if (
+        uploaderRef.current &&
+        !uploaderRef.current.contains(event.target) &&
+        !image
+      ) {
+        setIsImage(false);
+      }
+    };
+
+    window.addEventListener('mousedown', handleOutsideClick);
+
+    return () => {
+      window.removeEventListener('mousedown', handleOutsideClick);
+    };
+  }, [image]);
 
   return (
     <CardWrapper>
@@ -80,6 +98,7 @@ const MyPost = ({ picturePath }) => {
       </FlexBox>
       {isImage && (
         <Box
+          ref={uploaderRef}
           border={`1px solid ${medium}`}
           borderRadius="5px"
           marginLeft="2rem"
@@ -132,7 +151,7 @@ const MyPost = ({ picturePath }) => {
               "&:hover": { cursor: "pointer", color: medium },
             }}
           >
-            Image
+            Image  
           </Typography>
         </FlexBox>
         {isNonMobileScreens ? (
