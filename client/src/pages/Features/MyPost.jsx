@@ -57,9 +57,10 @@ const MyPost = ({ picturePath }) => {
     const posts = await response.json();
 
     dispatch(setPosts({ posts }));
-
+    
     setImage(null);
     setPost("");
+    window.location.reload();
 
   };
   useEffect(() => {
@@ -98,7 +99,7 @@ const MyPost = ({ picturePath }) => {
       </FlexBox>
       {isImage && (
         <Box
-          ref={uploaderRef}
+        ref={uploaderRef}
           border={`1px solid ${medium}`}
           borderRadius="5px"
           marginLeft="2rem"
