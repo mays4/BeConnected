@@ -43,7 +43,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 Open [http://localhost:3001](http://localhost:3001)
 
 To visit live site 
-To visit the live version [https://beconnected-q5xefu9k5-mays.vercel.app](https://beconnected-q5xefu9k5-mays.vercel.app)
+To visit the live version [https://beconnected-43cjtcyvb-mays.vercel.app](https://beconnected-43cjtcyvb-mays.vercel.app)
 
 
 ## Dependencies
